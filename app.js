@@ -407,43 +407,14 @@ $(document).ready(function () {
     $icon = $(".icon"),
     cartPageBottomP = document.querySelector(".cart-page-bottom p"),
     cartPageBottomH4 = document.querySelector(".cart-page-bottom h4");
-
-  // Thêm hình ảnh vào phần nền
-  const imgSrc = "ảnh/camhoang.jpg";
-  const imgElement = `<img src="${imgSrc}" alt="Christmas Image" style="width:100%; height:auto; display:block; margin: 0 auto; border-radius: 10px;" />`;
-  $(".cart-page-bottom").prepend(imgElement);
-
-  // Thêm tiêu đề và nội dung chữ
-  let textTitle = "Gửi em!";
-  let charArrTitle = textTitle.split('');
-  let text = "Merry Christmas, tình yêu của anh! Cảm ơn em đã đến, làm cuộc sống anh thêm ý nghĩa. Chúc em một mùa Noel rực rỡ, hạnh phúc và luôn mỉm cười.";
-  let charArrContent = text.split('');
-  var currentIndexTitle = 0;
-  var currentIndexContent = 0;
-  var textIntervalTitle;
-  var textIntervalContent;
-
-  function typeTitle() {
-    if (currentIndexTitle < charArrTitle.length) {
-      cartPageBottomH4.textContent += charArrTitle[currentIndexTitle];
-      currentIndexTitle++;
-    } else {
-      clearInterval(textIntervalTitle);
-      textIntervalContent = setInterval(typeContent, 100);
-    }
-  }
-
-  function typeContent() {
-    if (currentIndexContent < charArrContent.length) {
-      cartPageBottomP.textContent += charArrContent[currentIndexContent];
-      currentIndexContent++;
-    } else {
-      clearInterval(textIntervalContent);
-    }
-  }
-
-  textIntervalTitle = setInterval(typeTitle, 100);
-});
+    let textTitle = "Gửi em!";
+    let charArrTitle = textTitle.split('');
+let text = "Merry Christmas, tình yêu của anh! Cảm ơn em đã đến, làm cuộc sống anh thêm ý nghĩa. Chúc em một mùa Noel rực rỡ, hạnh phúc và luôn mỉm cười."
+let charArrContent = text.split('');
+var currentIndexTitle = 0;
+var currentIndexContent = 0;
+var textIntervalTitle;
+var textIntervalContent;
 function resetText(){
     clearInterval(textIntervalTitle)
     clearInterval(textIntervalContent)
